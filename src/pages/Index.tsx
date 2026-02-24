@@ -8,8 +8,8 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Hero */}
-      <section className="px-6 pb-16 pt-20 text-center">
+      {/* Hero with light orange gradient */}
+      <section className="px-6 pb-16 pt-20 text-center" style={{ background: 'linear-gradient(180deg, hsl(24 100% 97%) 0%, hsl(var(--background)) 100%)' }}>
         <a
           href="https://github.com/Corma101/Stop-the-SCIM-scheme"
           target="_blank"
@@ -19,12 +19,12 @@ const Index = () => {
           Maintained by Corma · Public Github repo available here
         </a>
 
-        <h1 className="mx-auto mt-6 max-w-2xl text-4xl font-medium leading-tight font-sans md:text-5xl">
-          The definitive guide to SCIM support across 721 apps
+        <h1 className="mx-auto mt-6 max-w-3xl text-4xl font-medium leading-tight font-sans md:text-5xl">
+          Your exhaustive guide to SCIM support and tax prices across 1000+ apps
         </h1>
 
-        <p className="mx-auto mt-4 max-w-xl text-base text-muted-foreground leading-relaxed font-mono">
-          We researched every app's provisioning support, pricing tiers, hidden upgrade costs, and technical specs — so you don't have to.
+        <p className="mx-auto mt-4 max-w-2xl text-base text-muted-foreground leading-relaxed font-mono">
+          We've built this collaborative list of apps and their SCIM support, pricing tiers, hidden costs and more so you know which vendors actually value security and which try to make money on a core feature that should be included by default. Everyone is free to participate, so join us in stopping the SCIM scheme.
         </p>
 
         <div className="mx-auto mt-8 max-w-lg">
