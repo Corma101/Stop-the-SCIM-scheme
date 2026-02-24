@@ -42,7 +42,7 @@ const AppDetail = () => {
       <div className="min-h-screen bg-background">
         <Navbar />
         <div className="flex flex-col items-center justify-center py-32">
-          <h1 className="text-2xl font-serif font-bold">App not found</h1>
+          <h1 className="text-2xl font-medium font-sans">App not found</h1>
           <Link to="/" className="mt-4 text-sm text-primary hover:underline">← Back to directory</Link>
         </div>
       </div>
@@ -66,7 +66,7 @@ const AppDetail = () => {
           <div>
             <img src={app.logo} alt={app.name} className="h-16 w-16 rounded-2xl" />
             <div className="mt-4 flex items-center gap-3 flex-wrap">
-              <h1 className="text-3xl font-bold font-serif md:text-4xl">{app.name} SCIM guide</h1>
+              <h1 className="text-3xl font-medium font-sans md:text-4xl">{app.name} SCIM guide</h1>
               <span className={`rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-wide ${getScimStatusColor(app.scimStatus)}`}>
                 {app.scimStatus === "no-scim" ? "No SCIM" : "Native SCIM"}
               </span>
@@ -109,7 +109,7 @@ const AppDetail = () => {
           <main className="min-w-0 flex-1 space-y-12">
             {/* Summary */}
             <section id="summary">
-              <h2 className="text-2xl font-bold font-serif">Summary and recommendation</h2>
+              <h2 className="text-2xl font-medium font-sans">Summary and recommendation</h2>
               <p className="mt-4 leading-relaxed text-foreground/90">{app.detailedSummary}</p>
               <div className="mt-6 rounded-2xl border-l-4 border-badge-green-foreground bg-badge-green p-6">
                 <div className="flex items-start gap-3">
@@ -124,7 +124,7 @@ const AppDetail = () => {
 
             {/* Quick Facts */}
             <section id="quick-facts">
-              <h2 className="text-2xl font-bold font-serif">Quick SCIM facts</h2>
+              <h2 className="text-2xl font-medium font-sans">Quick SCIM facts</h2>
               <div className="mt-4 overflow-hidden rounded-xl border">
                 <table className="w-full text-sm">
                   <tbody>
@@ -155,7 +155,7 @@ const AppDetail = () => {
 
             {/* IdP Support */}
             <section id="supported-idps">
-              <h2 className="text-2xl font-bold font-serif">Supported identity providers</h2>
+              <h2 className="text-2xl font-medium font-sans">Supported identity providers</h2>
               <div className="mt-4 overflow-hidden rounded-xl border">
                 <table className="w-full text-sm">
                   <thead>
@@ -188,7 +188,7 @@ const AppDetail = () => {
 
             {/* Cost */}
             <section id="cost">
-              <h2 className="text-2xl font-bold font-serif">The cost of not automating</h2>
+              <h2 className="text-2xl font-medium font-sans">The cost of not automating</h2>
               <p className="mt-2 text-sm text-muted-foreground">
                 Without SCIM (or an alternative), your IT team manages {app.name} accounts manually:
               </p>
@@ -203,7 +203,7 @@ const AppDetail = () => {
                 ].map((item, i) => (
                   <div key={i} className={`rounded-xl border p-4 ${item.highlight ? "bg-primary/5 border-primary/20" : "bg-card"}`}>
                     <p className="text-xs text-muted-foreground">{item.label}</p>
-                    <p className={`mt-1 text-lg font-bold font-serif ${item.highlight ? "text-primary" : ""}`}>{item.value}</p>
+                    <p className={`mt-1 text-lg font-medium font-sans ${item.highlight ? "text-primary" : ""}`}>{item.value}</p>
                   </div>
                 ))}
               </div>
@@ -211,7 +211,7 @@ const AppDetail = () => {
 
             {/* Pricing */}
             <section id="pricing">
-              <h2 className="text-2xl font-bold font-serif">The {app.name} pricing problem</h2>
+              <h2 className="text-2xl font-medium font-sans">The {app.name} pricing problem</h2>
               <div className="mt-4 overflow-hidden rounded-xl border">
                 <table className="w-full text-sm">
                   <thead>
@@ -243,7 +243,7 @@ const AppDetail = () => {
               )}
               {app.pricing.upgradeCosts.length > 0 && (
                 <div className="mt-6">
-                  <h3 className="text-lg font-semibold font-serif">What this means in practice</h3>
+                  <h3 className="text-lg font-medium font-sans">What this means in practice</h3>
                   <div className="mt-3 overflow-hidden rounded-xl border">
                     <table className="w-full text-sm">
                       <thead>
@@ -268,7 +268,7 @@ const AppDetail = () => {
 
             {/* Challenges */}
             <section id="challenges">
-              <h2 className="text-2xl font-bold font-serif">Summary of challenges</h2>
+              <h2 className="text-2xl font-medium font-sans">Summary of challenges</h2>
               <ul className="mt-4 space-y-2">
                 {app.challenges.map((ch, i) => (
                   <li key={i} className="flex items-start gap-2 text-sm">
@@ -281,7 +281,7 @@ const AppDetail = () => {
 
             {/* Community */}
             <section id="community">
-              <h2 className="text-2xl font-bold font-serif">What IT admins are saying</h2>
+              <h2 className="text-2xl font-medium font-sans">What IT admins are saying</h2>
               <div className="mt-4 space-y-4">
                 {app.communityQuotes.map((q, i) => (
                   <blockquote key={i} className="rounded-xl border bg-card p-5">
@@ -294,7 +294,7 @@ const AppDetail = () => {
 
             {/* Recommendation */}
             <section id="decision">
-              <h2 className="text-2xl font-bold font-serif">The decision</h2>
+              <h2 className="text-2xl font-medium font-sans">The decision</h2>
               <div className="mt-4 overflow-hidden rounded-xl border">
                 <table className="w-full text-sm">
                   <thead>
@@ -321,25 +321,30 @@ const AppDetail = () => {
 
             {/* CTA */}
             <section className="rounded-2xl bg-primary/5 border border-primary/20 p-8 text-center">
-              <h2 className="text-2xl font-bold font-serif">Make {app.name} workflows AI-native</h2>
-              <p className="mx-auto mt-3 max-w-md text-sm text-muted-foreground">
+              <h2 className="text-2xl font-medium font-sans">Make {app.name} workflows AI-native</h2>
+              <p className="mx-auto mt-3 max-w-md text-sm text-muted-foreground font-mono">
                 Skip the Enterprise upgrade. We build complete offboarding, user access reviews, and license workflows without the SCIM Tax.
               </p>
-              <div className="mt-6 flex flex-wrap justify-center gap-4 text-xs text-muted-foreground">
+              <div className="mt-6 flex flex-wrap justify-center gap-4 text-xs text-muted-foreground font-mono uppercase">
                 <span className="flex items-center gap-1"><Check className="h-3.5 w-3.5 text-badge-green-foreground" /> No Enterprise upgrade required</span>
                 <span className="flex items-center gap-1"><Check className="h-3.5 w-3.5 text-badge-green-foreground" /> Less than a week setup</span>
                 <span className="flex items-center gap-1"><Check className="h-3.5 w-3.5 text-badge-green-foreground" /> We maintain the integration</span>
               </div>
-              <button className="mt-6 inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm font-medium text-background hover:opacity-90 transition-opacity">
+              <a
+                href="https://meetings-eu1.hubspot.com/nikolai-fomm/meeting-book-identity-governance?uuid=0790fc0b-b0e7-452c-8845-d81d07c86572"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:opacity-90 transition-opacity"
+              >
                 Book a Demo
-              </button>
+              </a>
             </section>
           </main>
         </div>
       </div>
 
       <footer className="border-t py-8 text-center text-xs text-muted-foreground">
-        <p>© 2026 Stitchflow. SCIM Directory.</p>
+        <p>© 2026 Corma. SCIM Directory.</p>
       </footer>
     </div>
   );

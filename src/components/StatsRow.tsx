@@ -12,7 +12,7 @@ const StatsRow = () => {
     <div className="mx-auto grid max-w-3xl grid-cols-2 gap-px overflow-hidden rounded-2xl border bg-border md:grid-cols-4">
       {items.map((item, i) => (
         <div key={i} className="flex flex-col items-center justify-center bg-card px-4 py-6 text-center">
-          <span className="text-3xl font-bold font-serif text-foreground">{item.value}</span>
+          <span className="text-3xl font-medium font-sans text-foreground">{item.value}</span>
           <span className="mt-1 text-sm text-muted-foreground">{item.label}</span>
           {item.sublabel && (
             <span className="mt-1 text-[11px] text-primary">{item.sublabel}</span>
