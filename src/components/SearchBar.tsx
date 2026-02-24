@@ -116,7 +116,7 @@ const SearchBar = ({ placeholder, className = "", onSearch, navigateOnSelect = f
         />
         {navigateOnSelect && (
           <kbd className="hidden rounded border bg-muted px-2 py-0.5 text-xs text-muted-foreground sm:inline-block">
-            ⌘K
+            ⌘ K
           </kbd>
         )}
       </div>
