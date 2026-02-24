@@ -670,7 +670,7 @@ export const getScimStatusColor = (status: ScimStatus): string => {
 };
 
 export const stats = {
-  totalApps: 721,
+  totalApps: 1053,
   noScimPercent: "57%",
   scimTaxPercent: "41%",
   avgScimTax: "245%",
