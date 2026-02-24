@@ -10,11 +10,58 @@ interface SearchBarProps {
   navigateOnSelect?: boolean;
 }
 
-const SearchBar = ({ placeholder = "Search for Slack..", className = "", onSearch, navigateOnSelect = false }: SearchBarProps) => {
+const CYCLING_APPS = ["Slack", "Notion", "Asana", "Figma", "GitHub"];
+const PREFIX = "Search for ";
+
+const SearchBar = ({ placeholder, className = "", onSearch, navigateOnSelect = false }: SearchBarProps) => {
   const [query, setQuery] = useState("");
   const [showDropdown, setShowDropdown] = useState(false);
+  const [animatedText, setAnimatedText] = useState("");
   const navigate = useNavigate();
   const ref = useRef<HTMLDivElement>(null);
+
+  // Animated placeholder cycling
+  useEffect(() => {
+    if (query.length > 0) return; // Don't animate when user is typing
+
+    let appIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let timeout: ReturnType<typeof setTimeout>;
+
+    const tick = () => {
+      const currentApp = CYCLING_APPS[appIndex];
+
+      if (!isDeleting) {
+        charIndex++;
+        setAnimatedText(PREFIX + currentApp.slice(0, charIndex) + "..");
+        if (charIndex === currentApp.length) {
+          // Pause before deleting
+          timeout = setTimeout(() => {
+            isDeleting = true;
+            tick();
+          }, 1800);
+          return;
+        }
+        timeout = setTimeout(tick, 80);
+      } else {
+        charIndex--;
+        setAnimatedText(PREFIX + currentApp.slice(0, charIndex) + (charIndex > 0 ? ".." : ".."));
+        if (charIndex === 0) {
+          isDeleting = false;
+          appIndex = (appIndex + 1) % CYCLING_APPS.length;
+          timeout = setTimeout(tick, 300);
+          return;
+        }
+        timeout = setTimeout(tick, 50);
+      }
+    };
+
+    setAnimatedText(PREFIX + "..");
+    timeout = setTimeout(tick, 500);
+
+    return () => clearTimeout(timeout);
+  }, [query]);
 
   const filtered = query.length > 0
     ? apps.filter((a) => a.name.toLowerCase().includes(query.toLowerCase())).slice(0, 8)
@@ -49,7 +96,7 @@ const SearchBar = ({ placeholder = "Search for Slack..", className = "", onSearc
             onSearch?.(e.target.value);
           }}
           onFocus={() => query.length > 0 && setShowDropdown(true)}
-          placeholder={placeholder}
+          placeholder={animatedText || placeholder || "Search for .."}
           className="flex-1 bg-transparent text-sm outline-none placeholder:text-muted-foreground"
         />
         {navigateOnSelect && (

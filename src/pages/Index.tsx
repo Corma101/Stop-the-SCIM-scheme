@@ -1,14 +1,13 @@
-import Navbar from "@/components/Navbar";
+import { useState } from "react";
 import SearchBar from "@/components/SearchBar";
 import StatsRow from "@/components/StatsRow";
-import CategoryCards from "@/components/CategoryCards";
 import AppGrid from "@/components/AppGrid";
 
 const Index = () => {
+  const [activeFilter, setActiveFilter] = useState("all");
+
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
-
       {/* Hero */}
       <section className="px-6 pb-16 pt-20 text-center">
         <span className="inline-block rounded-full border px-4 py-1.5 text-xs font-medium uppercase tracking-widest text-muted-foreground font-mono">
@@ -24,22 +23,17 @@ const Index = () => {
         </p>
 
         <div className="mx-auto mt-8 max-w-lg">
-          <SearchBar navigateOnSelect placeholder="Search for Slack.." />
+          <SearchBar navigateOnSelect />
         </div>
 
         <div className="mt-10">
-          <StatsRow />
+          <StatsRow onFilterChange={setActiveFilter} />
         </div>
-      </section>
-
-      {/* Categories */}
-      <section className="bg-secondary/50 py-16">
-        <CategoryCards />
       </section>
 
       {/* App Directory */}
       <section className="py-16">
-        <AppGrid />
+        <AppGrid externalFilter={activeFilter} />
       </section>
 
       {/* Footer */}
