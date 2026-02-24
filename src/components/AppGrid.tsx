@@ -1,18 +1,19 @@
 import { useState, useMemo, useEffect } from "react";
 import { apps, ScimStatus, getScimStatusLabel, getScimStatusColor } from "@/data/apps";
 import AppCard from "./AppCard";
-import { SlidersHorizontal, ArrowUpDown, LayoutGrid, List } from "lucide-react";
-import { Link } from "react-router-dom";
+import { SlidersHorizontal, ArrowUpDown, LayoutGrid, List, ExternalLink } from "lucide-react";
+import { Link, useNavigate } from "react-router-dom";
 
 interface AppGridProps {
   externalFilter?: string;
 }
 
 const AppGrid = ({ externalFilter }: AppGridProps) => {
+  const navigate = useNavigate();
   const [statusFilter, setStatusFilter] = useState<string>("all");
   const [sortBy, setSortBy] = useState<string>("az");
   const [searchQuery, setSearchQuery] = useState("");
-  const [viewMode, setViewMode] = useState<"card" | "table">("card");
+  const [viewMode, setViewMode] = useState<"card" | "table">("table");
 
   useEffect(() => {
     if (externalFilter) setStatusFilter(externalFilter);
@@ -100,6 +101,7 @@ const AppGrid = ({ externalFilter }: AppGridProps) => {
                 <th className="px-4 py-3 text-left font-medium text-muted-foreground">SCIM Pricing</th>
                 <th className="px-4 py-3 text-left font-medium text-muted-foreground">% Increase</th>
                 <th className="px-4 py-3 text-left font-medium text-muted-foreground">Last Updated</th>
+                <th className="px-4 py-3 text-left font-medium text-muted-foreground">Source</th>
               </tr>
             </thead>
             <tbody>
@@ -107,17 +109,11 @@ const AppGrid = ({ externalFilter }: AppGridProps) => {
                 const basePlan = app.pricing.plans[0];
                 const scimPlan = app.pricing.plans.find((p) => p.scim);
                 return (
-                  <tr key={app.slug} className={`${i % 2 === 0 ? "bg-card" : "bg-muted/30"} transition-colors hover:bg-accent/50`}>
+                  <tr key={app.slug} className={`${i % 2 === 0 ? "bg-card" : "bg-muted/30"} transition-colors hover:bg-accent/50 cursor-pointer`} onClick={() => navigate(`/scim/${app.slug}`)}>
                     <td className="px-4 py-3">
-                      <Link to={`/scim/${app.slug}`}>
-                        <img src={app.logo} alt={app.name} className="h-8 w-8 rounded-lg" />
-                      </Link>
+                      <img src={app.logo} alt={app.name} className="h-8 w-8 rounded-lg" />
                     </td>
-                    <td className="px-4 py-3 font-medium">
-                      <Link to={`/scim/${app.slug}`} className="hover:text-primary transition-colors">
-                        {app.name}
-                      </Link>
-                    </td>
+                    <td className="px-4 py-3 font-medium">{app.name}</td>
                     <td className="px-4 py-3">
                       <span className={`inline-flex rounded-full px-2.5 py-0.5 text-[11px] font-medium ${getScimStatusColor(app.scimStatus)}`}>
                         {getScimStatusLabel(app.scimStatus)}
@@ -127,6 +123,13 @@ const AppGrid = ({ externalFilter }: AppGridProps) => {
                     <td className="px-4 py-3 text-muted-foreground">{scimPlan?.price ?? "N/A"}</td>
                     <td className="px-4 py-3 font-medium text-primary">{app.percentIncrease ?? "—"}</td>
                     <td className="px-4 py-3 text-muted-foreground text-xs">{app.lastUpdated ?? "Jan 2026"}</td>
+                    <td className="px-4 py-3">
+                      {app.quickFacts?.docsUrl && (
+                        <a href={app.quickFacts.docsUrl} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} className="text-muted-foreground hover:text-primary transition-colors">
+                          <ExternalLink className="h-4 w-4" />
+                        </a>
+                      )}
+                    </td>
                   </tr>
                 );
               })}
