@@ -10,9 +10,14 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       {/* Hero */}
       <section className="px-6 pb-16 pt-20 text-center">
-        <span className="inline-block rounded-full border px-4 py-1.5 text-xs font-medium uppercase tracking-widest text-muted-foreground font-mono">
-          Powered by Corma
-        </span>
+        <a
+          href="https://github.com/Corma101/Stop-the-SCIM-scheme"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block rounded-full border px-4 py-1.5 text-xs font-medium uppercase tracking-widest text-muted-foreground font-mono transition-colors hover:bg-accent hover:text-foreground"
+        >
+          Maintained by Corma · Public Github repo available here
+        </a>
 
         <h1 className="mx-auto mt-6 max-w-2xl text-4xl font-medium leading-tight font-sans md:text-5xl">
           The definitive guide to SCIM support across 721 apps
@@ -32,7 +37,7 @@ const Index = () => {
       </section>
 
       {/* App Directory */}
-      <section className="py-16">
+      <section className="py-6">
         <AppGrid externalFilter={activeFilter} />
       </section>
 
