@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Github } from "lucide-react";
 import SearchBar from "@/components/SearchBar";
 import StatsRow from "@/components/StatsRow";
 import AppGrid from "@/components/AppGrid";
@@ -14,9 +15,10 @@ const Index = () => {
           href="https://github.com/Corma101/Stop-the-SCIM-scheme"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block rounded-full border px-4 py-1.5 text-xs font-medium uppercase tracking-widest text-muted-foreground font-mono transition-colors hover:bg-accent hover:text-foreground"
+          className="inline-flex items-center gap-2 rounded-full border bg-card px-4 py-1.5 text-xs font-medium uppercase tracking-widest text-muted-foreground font-mono shadow-sm transition-colors hover:bg-accent hover:text-foreground"
         >
           Maintained by Corma · Public Github repo available here
+          <Github className="h-3.5 w-3.5" />
         </a>
 
         <h1 className="mx-auto mt-6 max-w-3xl text-4xl font-medium leading-tight font-sans md:text-5xl">
