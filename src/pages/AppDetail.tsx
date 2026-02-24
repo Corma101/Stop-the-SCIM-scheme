@@ -1,6 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeft, Lock, Check, X, Minus, CheckCircle } from "lucide-react";
-import Navbar from "@/components/Navbar";
+
 import SearchBar from "@/components/SearchBar";
 import { getAppBySlug, getScimStatusLabel, getScimStatusColor } from "@/data/apps";
 import { useState, useEffect } from "react";
@@ -40,7 +40,6 @@ const AppDetail = () => {
   if (!app) {
     return (
       <div className="min-h-screen bg-background">
-        <Navbar />
         <div className="flex flex-col items-center justify-center py-32">
           <h1 className="text-2xl font-medium font-sans">App not found</h1>
           <Link to="/" className="mt-4 text-sm text-primary hover:underline">← Back to directory</Link>
@@ -51,8 +50,6 @@ const AppDetail = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
-
       <div className="mx-auto max-w-7xl px-6 py-6">
         <Link to="/" className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors">
           <ArrowLeft className="h-4 w-4" />
@@ -86,7 +83,7 @@ const AppDetail = () => {
 
         <div className="mt-12 flex gap-12">
           {/* Sidebar TOC */}
-          <aside className="hidden w-56 shrink-0 lg:block">
+          <aside className="hidden w-56 shrink-0 lg:block sticky top-6 self-start">
             <p className="mb-4 text-[11px] font-semibold uppercase tracking-widest text-muted-foreground">Contents</p>
             <nav className="flex flex-col gap-0.5">
               {sections.map((s) => (
