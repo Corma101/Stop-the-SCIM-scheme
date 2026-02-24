@@ -24,8 +24,8 @@ const CategoryCards = () => {
             >
               <Icon className="h-6 w-6 text-primary" />
               <div>
-                <h3 className="font-semibold text-sm">{cat.title}</h3>
-                <p className="mt-1 text-xs text-muted-foreground leading-relaxed">{cat.description}</p>
+                <h3 className="font-medium text-sm font-sans">{cat.title}</h3>
+                <p className="mt-1 text-xs text-muted-foreground leading-relaxed font-mono">{cat.description}</p>
               </div>
               <p className="mt-auto text-sm">
                 <span className="font-bold">{cat.count}</span>{" "}

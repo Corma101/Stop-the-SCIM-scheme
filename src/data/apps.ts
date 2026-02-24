@@ -106,9 +106,9 @@ export const apps: AppData[] = [
       { quote: "Google Workspace users miss group sync feature", source: "Integration feedback" },
     ],
     recommendations: [
-      { situation: "On Business plan, need SCIM", recommendation: "Use Stitchflow: avoid the Enterprise tier jump" },
-      { situation: "On Plus plan, need provisioning", recommendation: "Use Stitchflow: skip two tier upgrades" },
-      { situation: "Using Google Workspace as IdP", recommendation: "Use Stitchflow: native SCIM doesn't support group provisioning" },
+      { situation: "On Business plan, need SCIM", recommendation: "Use Corma: avoid the Enterprise tier jump" },
+      { situation: "On Plus plan, need provisioning", recommendation: "Use Corma: skip two tier upgrades" },
+      { situation: "Using Google Workspace as IdP", recommendation: "Use Corma: native SCIM doesn't support group provisioning" },
       { situation: "Already on Enterprise plan", recommendation: "Use native SCIM: you're paying for it" },
       { situation: "Small team with low turnover", recommendation: "Manual provisioning may suffice" },
     ],
@@ -152,7 +152,7 @@ export const apps: AppData[] = [
       { quote: "Pro should include basic provisioning", source: "Community feedback" },
     ],
     recommendations: [
-      { situation: "On Pro plan, need SCIM", recommendation: "Use Stitchflow to avoid the upgrade" },
+      { situation: "On Pro plan, need SCIM", recommendation: "Use Corma to avoid the upgrade" },
       { situation: "Already on Business+", recommendation: "Use native SCIM" },
     ],
     bottomLine: "Slack's SCIM tax forces a 43% price increase from Pro to Business+ just for provisioning.",
@@ -228,7 +228,7 @@ export const apps: AppData[] = [
     challenges: ["Enterprise required for SCIM", "Organization plan has SSO but no SCIM", "Custom pricing lacks transparency"],
     communityQuotes: [{ quote: "Paying $45/editor and still no SCIM is absurd", source: "Design Lead" }],
     recommendations: [
-      { situation: "On Organization plan", recommendation: "Use Stitchflow to avoid Enterprise jump" },
+      { situation: "On Organization plan", recommendation: "Use Corma to avoid Enterprise jump" },
       { situation: "On Enterprise plan", recommendation: "Use native SCIM" },
     ],
     bottomLine: "Figma's SCIM requirement adds significant cost on top of already expensive Organization plans.",
@@ -264,7 +264,7 @@ export const apps: AppData[] = [
     challenges: ["425% price increase for SCIM", "No mid-tier option", "Enterprise-only feature"],
     communityQuotes: [{ quote: "The jump from Team to Enterprise just for SCIM is brutal", source: "Engineering Manager" }],
     recommendations: [
-      { situation: "On Team plan, need SCIM", recommendation: "Use Stitchflow to avoid 5x price increase" },
+      { situation: "On Team plan, need SCIM", recommendation: "Use Corma to avoid 5x price increase" },
       { situation: "On Enterprise Cloud", recommendation: "Use native SCIM" },
     ],
     bottomLine: "GitHub's 425% price jump from Team to Enterprise makes SCIM one of the most expensive upgrades in the SaaS ecosystem.",
@@ -302,7 +302,7 @@ export const apps: AppData[] = [
     challenges: ["Standard plan lacks SCIM", "Premium tier doubles the price", "Covers all Atlassian products"],
     communityQuotes: [{ quote: "Premium upgrade for SCIM doubles our Atlassian bill", source: "IT Director" }],
     recommendations: [
-      { situation: "On Standard plan", recommendation: "Use Stitchflow to avoid Premium upgrade" },
+      { situation: "On Standard plan", recommendation: "Use Corma to avoid Premium upgrade" },
       { situation: "On Premium or Enterprise", recommendation: "Use native SCIM" },
     ],
     bottomLine: "Atlassian's SCIM requirement effectively doubles costs from Standard to Premium tier.",
@@ -339,7 +339,7 @@ export const apps: AppData[] = [
     challenges: ["Enterprise required for SCIM", "Business has SSO but no SCIM", "Custom pricing"],
     communityQuotes: [{ quote: "Business plan should include SCIM alongside SSO", source: "IT Admin" }],
     recommendations: [
-      { situation: "On Business plan", recommendation: "Use Stitchflow to avoid Enterprise upgrade" },
+      { situation: "On Business plan", recommendation: "Use Corma to avoid Enterprise upgrade" },
       { situation: "On Enterprise", recommendation: "Use native SCIM" },
     ],
     bottomLine: "Asana follows the common pattern of gating SCIM behind opaque Enterprise pricing despite including SSO on lower tiers.",
@@ -375,7 +375,7 @@ export const apps: AppData[] = [
     communityQuotes: [{ quote: "SCIM on Business plan works well", source: "Sysadmin" }],
     recommendations: [
       { situation: "On Business or above", recommendation: "Use native SCIM" },
-      { situation: "On Plus plan", recommendation: "Evaluate upgrade vs Stitchflow" },
+      { situation: "On Plus plan", recommendation: "Evaluate upgrade vs Corma" },
     ],
     bottomLine: "Dropbox offers reasonable SCIM access on Business plans without excessive premium pricing.",
   },
@@ -411,7 +411,7 @@ export const apps: AppData[] = [
     communityQuotes: [{ quote: "SCIM works but Salesforce permissions are a maze", source: "Salesforce Admin" }],
     recommendations: [
       { situation: "Any Salesforce edition", recommendation: "Use native SCIM for basic provisioning" },
-      { situation: "Complex permission needs", recommendation: "Complement SCIM with Stitchflow" },
+      { situation: "Complex permission needs", recommendation: "Complement SCIM with Corma" },
     ],
     bottomLine: "Salesforce includes SCIM but its complex permission model means automated provisioning still requires significant manual configuration.",
   },
@@ -443,7 +443,7 @@ export const apps: AppData[] = [
     challenges: ["Enterprise required for SCIM", "Plus has SSO but no SCIM", "Custom pricing"],
     communityQuotes: [{ quote: "Linear's Enterprise pricing isn't published anywhere", source: "Engineering Lead" }],
     recommendations: [
-      { situation: "On Plus plan", recommendation: "Use Stitchflow" },
+      { situation: "On Plus plan", recommendation: "Use Corma" },
       { situation: "On Enterprise", recommendation: "Use native SCIM" },
     ],
     bottomLine: "Linear follows the SSO-without-SCIM pattern, frustrating teams who need both.",
@@ -476,7 +476,7 @@ export const apps: AppData[] = [
     challenges: ["Enterprise required for SCIM", "Business has SSO without SCIM"],
     communityQuotes: [{ quote: "SSO without SCIM is only half the solution", source: "IT Manager" }],
     recommendations: [
-      { situation: "On Business plan", recommendation: "Use Stitchflow" },
+      { situation: "On Business plan", recommendation: "Use Corma" },
       { situation: "On Enterprise", recommendation: "Use native SCIM" },
     ],
     bottomLine: "Miro's SCIM tax adds Enterprise pricing on top of Business plans that already include SSO.",
@@ -491,7 +491,7 @@ export const apps: AppData[] = [
     manualCost: "$12,400/yr",
     summary: "HubSpot does not support SCIM provisioning on any plan.",
     detailedSummary: "HubSpot lacks SCIM support entirely. Despite being a major SaaS platform, all user provisioning must be done manually through the admin portal. SAML SSO is available on Enterprise plans but doesn't address lifecycle management.",
-    strategicAlternative: "HubSpot has no SCIM at all. Automate CRM provisioning with Stitchflow without waiting for native support.",
+    strategicAlternative: "HubSpot has no SCIM at all. Automate CRM provisioning with Corma without waiting for native support.",
     quickFacts: { scimAvailable: "No", scimTierRequired: "N/A", ssoRequired: "N/A", ssoAvailable: "Yes (Enterprise)", ssoProtocol: "SAML 2.0", docsUrl: "https://knowledge.hubspot.com/account-security/set-up-single-sign-on-sso" },
     idpSupport: [
       { name: "Okta", sso: true, scim: false, notes: "SSO only" },
@@ -509,7 +509,7 @@ export const apps: AppData[] = [
     challenges: ["No SCIM on any plan", "Manual provisioning only", "Enterprise SSO doesn't include provisioning"],
     communityQuotes: [{ quote: "No SCIM for a platform this size is inexcusable", source: "Revenue Ops" }],
     recommendations: [
-      { situation: "Any HubSpot plan", recommendation: "Use Stitchflow for automated provisioning" },
+      { situation: "Any HubSpot plan", recommendation: "Use Corma for automated provisioning" },
     ],
     bottomLine: "HubSpot's complete lack of SCIM forces manual provisioning regardless of plan or spend level.",
   },
@@ -544,7 +544,7 @@ export const apps: AppData[] = [
     communityQuotes: [{ quote: "Managing SCIM Bridge is an ongoing burden", source: "DevOps Engineer" }],
     recommendations: [
       { situation: "On Business plan", recommendation: "Evaluate if SCIM Bridge overhead is worth it" },
-      { situation: "Want zero-maintenance provisioning", recommendation: "Use Stitchflow" },
+      { situation: "Want zero-maintenance provisioning", recommendation: "Use Corma" },
     ],
     bottomLine: "1Password's self-hosted SCIM Bridge creates ongoing operational overhead that defeats the purpose of automated provisioning.",
   },
@@ -577,7 +577,7 @@ export const apps: AppData[] = [
     challenges: ["Enterprise required for both SSO and SCIM", "No mid-tier option", "Custom pricing"],
     communityQuotes: [{ quote: "Enterprise-only SSO and SCIM is a dealbreaker", source: "Operations Manager" }],
     recommendations: [
-      { situation: "On Pro plan", recommendation: "Use Stitchflow" },
+      { situation: "On Pro plan", recommendation: "Use Corma" },
       { situation: "On Enterprise", recommendation: "Use native SCIM" },
     ],
     bottomLine: "monday.com bundles SSO and SCIM exclusively in Enterprise, forcing an expensive upgrade for any automation.",
@@ -610,7 +610,7 @@ export const apps: AppData[] = [
     challenges: ["Enterprise Scale required for SCIM", "Business has SSO without SCIM", "Custom pricing only"],
     communityQuotes: [{ quote: "Enterprise Scale is vague and expensive", source: "Data Team Lead" }],
     recommendations: [
-      { situation: "On Business plan", recommendation: "Use Stitchflow" },
+      { situation: "On Business plan", recommendation: "Use Corma" },
       { situation: "On Enterprise Scale", recommendation: "Use native SCIM" },
     ],
     bottomLine: "Airtable's Enterprise Scale requirement adds opaque costs on top of an already premium Business plan.",
