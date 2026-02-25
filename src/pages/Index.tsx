@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Github } from "lucide-react";
 import SearchBar from "@/components/SearchBar";
 import StatsRow from "@/components/StatsRow";
@@ -44,7 +45,23 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="border-t py-8 text-center text-xs text-muted-foreground">
+      <footer className="border-t py-8 text-center text-xs text-muted-foreground font-mono">
+        <div className="flex items-center justify-center gap-6 mb-3">
+          <Link to="/" className="hover:text-foreground transition-colors">
+            Directory
+          </Link>
+          <Link to="/about" className="hover:text-foreground transition-colors">
+            About
+          </Link>
+          <a
+            href="https://github.com/Corma101/Stop-the-SCIM-scheme"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-foreground transition-colors"
+          >
+            GitHub
+          </a>
+        </div>
         <p>© 2026 Corma. SCIM Directory — Helping IT teams navigate provisioning complexity.</p>
       </footer>
     </div>
