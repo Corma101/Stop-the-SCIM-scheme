@@ -53,6 +53,9 @@ const Index = () => {
           <Link to="/about" className="hover:text-foreground transition-colors">
             About
           </Link>
+          <Link to="/sso-vs-scim" className="hover:text-foreground transition-colors">
+            SSO vs SCIM
+          </Link>
           <a
             href="https://github.com/Corma101/Stop-the-SCIM-scheme"
             target="_blank"
