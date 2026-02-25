@@ -1,44 +1,5 @@
 import { Link } from "react-router-dom";
 import { Github, ArrowLeft } from "lucide-react";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
-
-const faqs = [
-  {
-    question: "What is SCIM?",
-    answer:
-      "SCIM (System for Cross-domain Identity Management) is an open standard that automates user provisioning and de-provisioning between identity providers and SaaS applications. It ensures that when an employee joins, moves, or leaves an organization, their access is updated automatically.",
-  },
-  {
-    question: "Why does SCIM support matter?",
-    answer:
-      "Without SCIM, IT teams must manually create, update, and remove user accounts across every application. This is time-consuming, error-prone, and creates serious security risks — especially when offboarding is delayed and former employees retain access.",
-  },
-  {
-    question: "What is the 'SCIM tax'?",
-    answer:
-      "The SCIM tax refers to vendors locking SCIM provisioning behind their most expensive pricing tiers. This forces organizations to pay significantly more just to access a basic security feature, turning identity management into a revenue lever rather than a standard capability.",
-  },
-  {
-    question: "How is this directory maintained?",
-    answer:
-      "This directory is collaboratively maintained by the community and curated by Corma. Anyone can contribute via our public GitHub repository. We verify submissions and keep entries up to date as vendors change their policies.",
-  },
-  {
-    question: "Can I contribute to the directory?",
-    answer:
-      "Absolutely! We welcome contributions from IT admins, security engineers, and anyone who has first-hand experience with SCIM implementations. Head over to our GitHub repository to submit updates, corrections, or new app entries.",
-  },
-  {
-    question: "Who is Corma?",
-    answer:
-      "Corma is an identity governance platform that helps IT teams automate user lifecycle management. We built this directory because we believe SCIM should be a standard feature, not a premium upsell.",
-  },
-];
 
 const About = () => {
   return (
@@ -60,14 +21,11 @@ const About = () => {
         </Link>
 
         <h1 className="mx-auto mt-4 max-w-3xl text-4xl font-medium leading-tight font-sans md:text-5xl">
-          About Stop the SCIM Scheme
+          The SCIM Scheme Manifesto
         </h1>
 
-        <p className="mx-auto mt-6 max-w-2xl text-base text-muted-foreground leading-relaxed font-mono">
-          We believe SCIM provisioning is a fundamental security feature — not a
-          premium add-on. This project exists to bring transparency to how SaaS
-          vendors handle identity management and to push the industry toward
-          making SCIM available at every pricing tier.
+        <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed font-mono italic">
+          Security is not a luxury tier.
         </p>
 
         <a
@@ -81,46 +39,138 @@ const About = () => {
         </a>
       </section>
 
-      {/* Mission */}
+      {/* Manifesto intro */}
       <section className="mx-auto max-w-3xl px-6 py-16">
-        <h2 className="text-2xl font-medium font-sans mb-6">Our mission</h2>
         <div className="space-y-4 text-muted-foreground font-mono text-sm leading-relaxed">
           <p>
-            Every year, organizations lose thousands of hours manually managing
-            user accounts across their SaaS stack. Worse, delayed offboarding
-            creates security vulnerabilities that put sensitive data at risk.
+            When an employee joins, their access should appear instantly. When they leave, it should disappear just as fast.
           </p>
+          <p>That is not convenience. That is control.</p>
           <p>
-            SCIM solves this problem — but too many vendors gate it behind
-            enterprise pricing tiers, effectively taxing companies for wanting
-            better security. We think that's wrong.
+            SCIM — the standard for automated provisioning and deprovisioning — exists so companies can manage identity at scale without spreadsheets, tickets, and human delay. It closes gaps. It reduces risk. It protects customers.
           </p>
+          <p>And yet, many vendors lock lifecycle automation behind enterprise paywalls.</p>
           <p>
-            This directory catalogs 1,000+ applications and their SCIM support
-            status, pricing requirements, and community feedback. Our goal is
-            simple: arm IT teams with the information they need to make better
-            purchasing decisions and hold vendors accountable.
+            They charge more to remove access. They upsell security as a feature. They monetize what should be baseline hygiene.
+          </p>
+          <p className="text-foreground font-semibold">We call that the SCIM Scheme.</p>
+        </div>
+      </section>
+
+      {/* We believe - highlight */}
+      <section
+        className="px-6 py-16"
+        style={{
+          background:
+            "linear-gradient(180deg, hsl(24 100% 97%) 0%, hsl(var(--background)) 100%)",
+        }}
+      >
+        <div className="mx-auto max-w-3xl">
+          <h2 className="text-2xl font-medium font-sans mb-6">We believe</h2>
+          <ul className="space-y-3 text-muted-foreground font-mono text-sm leading-relaxed">
+            <li className="flex items-start gap-2"><span className="text-foreground mt-0.5">→</span> Access granted automatically. Access revoked immediately.</li>
+            <li className="flex items-start gap-2"><span className="text-foreground mt-0.5">→</span> Security included by default.</li>
+            <li className="flex items-start gap-2"><span className="text-foreground mt-0.5">→</span> No upsell. No artificial tiers. No paying extra to be safe.</li>
+          </ul>
+          <p className="mt-6 text-sm font-mono text-muted-foreground">
+            Modern companies deserve secure foundations — not premium add-ons.
+          </p>
+          <p className="mt-2 text-sm font-mono text-foreground font-semibold">
+            Security is not an upgrade. It's the standard.
           </p>
         </div>
       </section>
 
-      {/* FAQ */}
-      <section className="mx-auto max-w-3xl px-6 pb-20">
-        <h2 className="text-2xl font-medium font-sans mb-6">
-          Frequently asked questions
-        </h2>
-        <Accordion type="single" collapsible className="w-full">
-          {faqs.map((faq, i) => (
-            <AccordionItem key={i} value={`faq-${i}`}>
-              <AccordionTrigger className="text-left font-mono text-sm">
-                {faq.question}
-              </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground font-mono text-sm leading-relaxed">
-                {faq.answer}
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
+      {/* Why the SCIM Scheme exists */}
+      <section className="mx-auto max-w-3xl px-6 py-16">
+        <h2 className="text-2xl font-medium font-sans mb-6">Why the SCIM Scheme exists</h2>
+        <div className="space-y-4 text-muted-foreground font-mono text-sm leading-relaxed">
+          <p>
+            The SCIM Scheme is a community-driven initiative advocating for secure, automated identity lifecycle management to be accessible to every organization — not just enterprises with premium budgets.
+          </p>
+          <p>
+            SCIM (System for Cross-domain Identity Management) is the open standard that enables automated provisioning and deprovisioning of users between identity providers (such as Okta, Microsoft Entra ID, Google Workspace) and SaaS applications.
+          </p>
+          <p>
+            While Single Sign-On controls authentication, SCIM controls authorization lifecycle — automatically creating accounts, assigning roles, updating attributes, and most importantly, removing access the moment someone leaves.
+          </p>
+          <p>Without SCIM, IT teams are forced to manually:</p>
+          <ul className="list-disc list-inside space-y-1 pl-2">
+            <li>Create user accounts in every SaaS tool</li>
+            <li>Update roles and permissions individually</li>
+            <li>Deactivate users one application at a time during offboarding</li>
+          </ul>
+          <p>This manual work is not just inefficient — it is a security risk.</p>
+          <p>
+            Imagine an employee leaving the company. Even if SSO access is revoked, local accounts or stale API tokens can persist. Multiply that across dozens of tools and the exposure window grows quickly.
+          </p>
+          <p className="text-foreground font-semibold">
+            Lifecycle automation is not a "premium feature." It is foundational security hygiene.
+          </p>
+          <p>
+            And yet, many vendors lock SCIM behind their most expensive enterprise tiers — often doubling or tripling the cost of the product.
+          </p>
+          <p>That's what we call the SCIM Scheme.</p>
+        </div>
+      </section>
+
+      {/* What we believe */}
+      <section className="mx-auto max-w-3xl px-6 pb-16">
+        <h2 className="text-2xl font-medium font-sans mb-6">What we believe</h2>
+        <ul className="space-y-3 text-muted-foreground font-mono text-sm leading-relaxed">
+          <li className="flex items-start gap-2"><span className="text-foreground mt-0.5">→</span> Automated provisioning and deprovisioning is a core security requirement</li>
+          <li className="flex items-start gap-2"><span className="text-foreground mt-0.5">→</span> Identity lifecycle management should not be paywalled</li>
+          <li className="flex items-start gap-2"><span className="text-foreground mt-0.5">→</span> Security features should not be upsell levers</li>
+          <li className="flex items-start gap-2"><span className="text-foreground mt-0.5">→</span> Transparency drives better vendor behavior</li>
+          <li className="flex items-start gap-2"><span className="text-foreground mt-0.5">→</span> Customers deserve clarity before signing contracts</li>
+        </ul>
+        <p className="mt-6 text-sm font-mono text-muted-foreground">
+          Charging extra to remove former employees' access is not innovation — it is risk monetization.
+        </p>
+      </section>
+
+      {/* What we do */}
+      <section
+        className="px-6 py-16"
+        style={{
+          background:
+            "linear-gradient(180deg, hsl(24 100% 97%) 0%, hsl(var(--background)) 100%)",
+        }}
+      >
+        <div className="mx-auto max-w-3xl">
+          <h2 className="text-2xl font-medium font-sans mb-6">What we do</h2>
+          <div className="space-y-4 text-muted-foreground font-mono text-sm leading-relaxed">
+            <p>The SCIM Scheme aims to:</p>
+            <ul className="space-y-2">
+              <li className="flex items-start gap-2"><span className="text-foreground mt-0.5">→</span> Document which vendors restrict SCIM behind premium plans</li>
+              <li className="flex items-start gap-2"><span className="text-foreground mt-0.5">→</span> Highlight companies that make lifecycle automation accessible</li>
+              <li className="flex items-start gap-2"><span className="text-foreground mt-0.5">→</span> Provide clear, updated information to buyers</li>
+              <li className="flex items-start gap-2"><span className="text-foreground mt-0.5">→</span> Educate startups and IT teams about why SCIM matters</li>
+              <li className="flex items-start gap-2"><span className="text-foreground mt-0.5">→</span> Encourage vendors to treat security as responsibility, not revenue</li>
+            </ul>
+            <p>
+              This initiative is not about vendor shaming. It is about raising the baseline for SaaS security.
+            </p>
+            <p>When vendors make secure defaults accessible, we celebrate them.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Our goal */}
+      <section className="mx-auto max-w-3xl px-6 py-16 text-center">
+        <h2 className="text-2xl font-medium font-sans mb-6">Our goal</h2>
+        <p className="text-muted-foreground font-mono text-sm leading-relaxed">
+          The objective is simple:
+        </p>
+        <p className="mt-4 text-lg font-sans font-medium text-foreground">
+          Make secure lifecycle management the standard — not a surcharge.
+        </p>
+        <p className="mt-4 text-muted-foreground font-mono text-sm">
+          Security should not be an upgrade.
+        </p>
+        <p className="text-foreground font-mono text-sm font-semibold">
+          It should be included.
+        </p>
       </section>
 
       {/* Footer */}
