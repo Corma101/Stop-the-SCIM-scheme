@@ -87,7 +87,7 @@ const About = () => {
 
       {/* Why the SCIM Scheme exists */}
       <section className="mx-auto max-w-3xl px-6 py-16">
-        <h2 className="text-2xl font-medium font-sans mb-6">Why the SCIM Scheme exists</h2>
+        <h2 className="text-2xl font-medium font-sans mb-6">Why this page exists</h2>
         <div className="space-y-4 text-muted-foreground font-mono text-sm leading-relaxed">
           <p>
             The SCIM Scheme is a community-driven initiative advocating for secure, automated identity lifecycle
@@ -98,8 +98,8 @@ const About = () => {
             and deprovisioning of users between identity providers (such as Okta, Microsoft Entra ID, Google Workspace)
             and SaaS applications.
           </p>
-          <p>
-            While <a href="https://www.corma.io/blog/sso-scim-and-saml-key-technologies-for-automated-user-provisioning-in-identity-access-management" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary transition-colors">Single Sign-On controls authentication, SCIM controls authorization lifecycle</a> — automatically creating
+          <p>While SSO controls authentication, SCIM controls authorization lifecycle. SCIM allows to automatically create accounts, assign roles, update attributes, and most importantly, removing access the moment someone leaves.
+            <a href="https://www.corma.io/blog/sso-scim-and-saml-key-technologies-for-automated-user-provisioning-in-identity-access-management" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary transition-colors">Single Sign-On controls authentication, SCIM controls authorization lifecycle</a> — automatically creating
             accounts, assigning roles, updating attributes, and most importantly, removing access the moment someone
             leaves.
           </p>
@@ -183,7 +183,10 @@ const About = () => {
               </li>
             </ul>
             <p>This initiative is not about vendor shaming. It is about raising the baseline for SaaS security.</p>
-            <p>When vendors make secure defaults accessible, we celebrate them.</p>
+            <p className="text-muted-foreground">When vendors make secure defaults accessible, we celebrate them.
+
+
+            </p>
           </div>
         </div>
       </section>
@@ -192,8 +195,8 @@ const About = () => {
       <section className="mx-auto max-w-3xl px-6 py-16 text-center">
         <h2 className="text-2xl font-medium font-sans mb-6">Our goal</h2>
         <p className="text-muted-foreground font-mono text-sm leading-relaxed">The objective is simple:</p>
-        <p className="mt-4 text-lg font-sans font-medium text-foreground">
-          Make secure lifecycle management the standard — not a surcharge.
+        <p className="mt-4 text-lg font-sans font-medium text-foreground">Security should not be an upgrade. It should be included.
+
         </p>
         <p className="mt-4 text-muted-foreground font-mono text-sm">Security should not be an upgrade.</p>
         <p className="text-foreground font-mono text-sm font-semibold">It should be included.</p>
@@ -211,11 +214,8 @@ const About = () => {
           <Link to="/sso-vs-scim" className="hover:text-foreground transition-colors">
             SSO vs SCIM
           </Link>
-          <a
-            href="https://github.com/Corma101/Stop-the-SCIM-scheme"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-foreground transition-colors">
+          <a href="https://github.com/Corma101/Stop-the-SCIM-scheme" target="_blank" rel="noopener noreferrer"
+          className="hover:text-foreground transition-colors">
 
             GitHub
           </a>
