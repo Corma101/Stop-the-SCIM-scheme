@@ -199,7 +199,9 @@ const About = () => {
 
         </p>
         <p className="mt-4 text-muted-foreground font-mono text-sm">Security should not be an upgrade.</p>
-        <p className="text-foreground font-mono text-sm font-semibold">It should be included.</p>
+        <p className="text-foreground font-mono text-sm font-semibold">
+A special shout-out goes to ssotax.org. The SSO Tax Wall of Shame does something similar with vendors that hide access to SSO behind a paywall.       
+        </p>
       </section>
 
       {/* Footer */}
@@ -214,8 +216,7 @@ const About = () => {
           <Link to="/sso-vs-scim" className="hover:text-foreground transition-colors">
             SSO vs SCIM
           </Link>
-          <a href="https://github.com/Corma101/Stop-the-SCIM-scheme" target="_blank" rel="noopener noreferrer"
-          className="hover:text-foreground transition-colors">
+          <a href="https://github.com/Corma101/Stop-the-SCIM-scheme" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
 
             GitHub
           </a>
@@ -223,7 +224,6 @@ const About = () => {
         <p>© 2026 Corma. SCIM Directory — Helping IT teams navigate provisioning complexity.</p>
       </footer>
     </div>);
-
 };
 
 export default About;
