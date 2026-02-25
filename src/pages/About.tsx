@@ -45,28 +45,8 @@ const About = () => {
             When an employee joins, their access should appear instantly. When they leave, it should disappear just as
             fast.
           </p>
-          <p className="text-secondary-foreground">SCIM is the standard for automated provisioning and deprovisioning. IT exists so companies can manage identity at scale without spreadsheets, tickets, and human delay. It closes gaps. It reduces risk. It protects customers. The SCIM system has long been ago been established as an industry standard and can be found in the large majority of tools.
-
-
-
+          <p className="text-secondary-foreground"><a href="https://scim.cloud" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary transition-colors">SCIM</a> is the standard for automated provisioning and deprovisioning. IT exists so companies can manage identity at scale without spreadsheets, tickets, and human delay. It closes gaps. It reduces risk. It protects customers. The SCIM system has long been ago been established as an industry standard and can be found in the large majority of tools.
           </p>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
           <p className="text-secondary-foreground">
             And yet, many vendors lock lifecycle automation behind enterprise paywalls.
           </p>
@@ -114,12 +94,12 @@ const About = () => {
             management to be accessible to every organization — not just enterprises with premium budgets.
           </p>
           <p>
-            SCIM (System for Cross-domain Identity Management) is the open standard that enables automated provisioning
+            <a href="https://www.corma.io/blog/understanding-scim-and-saml-in-under-5-minutes" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary transition-colors">SCIM (System for Cross-domain Identity Management)</a> is the open standard that enables automated provisioning
             and deprovisioning of users between identity providers (such as Okta, Microsoft Entra ID, Google Workspace)
             and SaaS applications.
           </p>
           <p>
-            While Single Sign-On controls authentication, SCIM controls authorization lifecycle — automatically creating
+            While <a href="https://www.corma.io/blog/sso-scim-and-saml-key-technologies-for-automated-user-provisioning-in-identity-access-management" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary transition-colors">Single Sign-On controls authentication, SCIM controls authorization lifecycle</a> — automatically creating
             accounts, assigning roles, updating attributes, and most importantly, removing access the moment someone
             leaves.
           </p>
@@ -135,7 +115,7 @@ const About = () => {
             can persist. Multiply that across dozens of tools and the exposure window grows quickly.
           </p>
           <p className="text-foreground font-semibold">
-            Lifecycle automation is not a "premium feature." It is foundational security hygiene.
+            Lifecycle automation is not a "premium feature." It is <a href="https://www.corma.io/blog/how-automated-user-provisioning-scim-and-saml-can-help-with-soc2-and-iso27001-compliance" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary transition-colors">foundational security hygiene</a>.
           </p>
           <p>
             And yet, many vendors lock SCIM behind their most expensive enterprise tiers — often doubling or tripling
@@ -195,7 +175,7 @@ const About = () => {
                 <span className="text-foreground mt-0.5">→</span> Provide clear, updated information to buyers
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-foreground mt-0.5">→</span> Educate startups and IT teams about why SCIM matters
+                <span className="text-foreground mt-0.5">→</span> Educate startups and IT teams about <a href="https://scim.cloud" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary transition-colors">why SCIM matters</a>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-foreground mt-0.5">→</span> Encourage vendors to treat security as responsibility,
