@@ -9,13 +9,13 @@ const About = () => {
         className="px-6 pb-16 pt-20 text-center"
         style={{
           background:
-            "linear-gradient(180deg, hsl(24 100% 97%) 0%, hsl(var(--background)) 100%)",
-        }}
-      >
+          "linear-gradient(180deg, hsl(24 100% 97%) 0%, hsl(var(--background)) 100%)"
+        }}>
+
         <Link
           to="/"
-          className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors font-mono mb-8"
-        >
+          className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors font-mono mb-8">
+
           <ArrowLeft className="h-4 w-4" />
           Back to directory
         </Link>
@@ -24,16 +24,16 @@ const About = () => {
           The SCIM Scheme Manifesto
         </h1>
 
-        <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed font-mono italic">
-          Security is not a luxury tier.
+        <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed font-mono italic">Security is not a p tier.
+
         </p>
 
         <a
           href="https://github.com/Corma101/Stop-the-SCIM-scheme"
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-8 inline-flex items-center gap-2 rounded-full border bg-secondary px-5 py-2 text-sm font-medium text-foreground font-mono shadow-sm transition-colors hover:bg-accent"
-        >
+          className="mt-8 inline-flex items-center gap-2 rounded-full border bg-secondary px-5 py-2 text-sm font-medium text-foreground font-mono shadow-sm transition-colors hover:bg-accent">
+
           <Github className="h-4 w-4" />
           Contribute on GitHub
         </a>
@@ -62,9 +62,9 @@ const About = () => {
         className="px-6 py-16"
         style={{
           background:
-            "linear-gradient(180deg, hsl(24 100% 97%) 0%, hsl(var(--background)) 100%)",
-        }}
-      >
+          "linear-gradient(180deg, hsl(24 100% 97%) 0%, hsl(var(--background)) 100%)"
+        }}>
+
         <div className="mx-auto max-w-3xl">
           <h2 className="text-2xl font-medium font-sans mb-6">We believe</h2>
           <ul className="space-y-3 text-muted-foreground font-mono text-sm leading-relaxed">
@@ -134,9 +134,9 @@ const About = () => {
         className="px-6 py-16"
         style={{
           background:
-            "linear-gradient(180deg, hsl(24 100% 97%) 0%, hsl(var(--background)) 100%)",
-        }}
-      >
+          "linear-gradient(180deg, hsl(24 100% 97%) 0%, hsl(var(--background)) 100%)"
+        }}>
+
         <div className="mx-auto max-w-3xl">
           <h2 className="text-2xl font-medium font-sans mb-6">What we do</h2>
           <div className="space-y-4 text-muted-foreground font-mono text-sm leading-relaxed">
@@ -183,8 +183,8 @@ const About = () => {
         </div>
         <p>© 2026 Corma. SCIM Directory — Helping IT teams navigate provisioning complexity.</p>
       </footer>
-    </div>
-  );
+    </div>);
+
 };
 
 export default About;
