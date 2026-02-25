@@ -47,7 +47,7 @@ const About = () => {
           </p>
           <p>That is not convenience. That is control.</p>
           <p>
-            SCIM — the standard for automated provisioning and deprovisioning — exists so companies can manage identity at scale without spreadsheets, tickets, and human delay. It closes gaps. It reduces risk. It protects customers.
+            <a href="https://www.corma.io/blog/understanding-scim-and-saml-in-under-5-minutes" target="_blank" rel="noopener noreferrer" className="underline text-foreground hover:text-primary transition-colors">SCIM</a> — the standard for automated provisioning and deprovisioning — exists so companies can manage identity at scale without spreadsheets, tickets, and human delay. It closes gaps. It reduces risk. It protects customers.
           </p>
           <p>And yet, many vendors lock lifecycle automation behind enterprise paywalls.</p>
           <p>
