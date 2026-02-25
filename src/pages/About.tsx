@@ -8,13 +8,13 @@ const About = () => {
       <section
         className="px-6 pb-16 pt-20 text-center"
         style={{
-          background: "linear-gradient(180deg, hsl(24 100% 97%) 0%, hsl(var(--background)) 100%)",
-        }}
-      >
+          background: "linear-gradient(180deg, hsl(24 100% 97%) 0%, hsl(var(--background)) 100%)"
+        }}>
+
         <Link
           to="/"
-          className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors font-mono mb-8"
-        >
+          className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors font-mono mb-8">
+
           <ArrowLeft className="h-4 w-4" />
           Back to directory
         </Link>
@@ -31,8 +31,8 @@ const About = () => {
           href="https://github.com/Corma101/Stop-the-SCIM-scheme"
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-8 inline-flex items-center gap-2 rounded-full border bg-secondary px-5 py-2 text-sm font-medium text-foreground font-mono shadow-sm transition-colors hover:bg-accent"
-        >
+          className="mt-8 inline-flex items-center gap-2 rounded-full border bg-secondary px-5 py-2 text-sm font-medium text-foreground font-mono shadow-sm transition-colors hover:bg-accent">
+
           <Github className="h-4 w-4" />
           Contribute on GitHub
         </a>
@@ -45,24 +45,28 @@ const About = () => {
             When an employee joins, their access should appear instantly. When they leave, it should disappear just as
             fast.
           </p>
-          <p className="text-secondary-foreground">That is not convenience. That is control.</p>
-          <p className="text-secondary-foreground">
-            SCIM — the standard for automated provisioning and deprovisioning — exists so companies can manage identity
-            at scale without spreadsheets, tickets, and human delay. It closes gaps. It reduces risk. It protects
-            customers.The SCIM system has long been ago been established as an industry standard and can be found in the
-            large majority of tools.
-            <a
-              href="https://https://scim.cloud"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline text-foreground hover:text-primary transition-colors"
-            >
-              SCIM
-            </a>{" "}
-            — the standard for automated provisioning and deprovisioning — exists so companies can manage identity at
-            scale without spreadsheets, tickets, and human delay. It closes gaps. It reduces risk. It protects
-            customers.
+          <p className="text-secondary-foreground">That is not convenience. That is control
+
+SCIM is the standard for automated provisioning and deprovisioning. IT exists so companies can manage identity at scale without spreadsheets, tickets, and human delay. It closes gaps. It reduces risk. It protects customers. The SCIM system has long been ago been established as an industry standard and can be found in the large majority of tools.
+
           </p>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
           <p className="text-secondary-foreground">
             And yet, many vendors lock lifecycle automation behind enterprise paywalls.
           </p>
@@ -75,12 +79,8 @@ const About = () => {
       </section>
 
       {/* We believe - highlight */}
-      <section
-        className="px-6 py-16"
-        style={{
-          background: "linear-gradient(180deg, hsl(24 100% 97%) 0%, hsl(var(--background)) 100%)",
-        }}
-      >
+      <section className="px-6 py-16" style={{ background: "linear-gradient(180deg, hsl(24 100% 97%) 0%, hsl(var(--background)) 100%)" }}>
+
         <div className="mx-auto max-w-3xl">
           <h2 className="text-2xl font-medium font-sans mb-6">We believe</h2>
           <ul className="space-y-3 text-muted-foreground font-mono text-sm leading-relaxed">
@@ -175,9 +175,9 @@ const About = () => {
       <section
         className="px-6 py-16"
         style={{
-          background: "linear-gradient(180deg, hsl(24 100% 97%) 0%, hsl(var(--background)) 100%)",
-        }}
-      >
+          background: "linear-gradient(180deg, hsl(24 100% 97%) 0%, hsl(var(--background)) 100%)"
+        }}>
+
         <div className="mx-auto max-w-3xl">
           <h2 className="text-2xl font-medium font-sans mb-6">What we do</h2>
           <div className="space-y-4 text-muted-foreground font-mono text-sm leading-relaxed">
@@ -235,15 +235,15 @@ const About = () => {
             href="https://github.com/Corma101/Stop-the-SCIM-scheme"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-foreground transition-colors"
-          >
+            className="hover:text-foreground transition-colors">
+
             GitHub
           </a>
         </div>
         <p>© 2026 Corma. SCIM Directory — Helping IT teams navigate provisioning complexity.</p>
       </footer>
-    </div>
-  );
+    </div>);
+
 };
 
 export default About;
