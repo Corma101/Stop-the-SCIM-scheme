@@ -18,7 +18,7 @@ const Index = () => {
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 rounded-full border bg-card px-4 py-1.5 text-xs font-medium uppercase tracking-widest text-muted-foreground font-mono shadow-sm transition-colors hover:bg-accent hover:text-foreground"
         >
-          Maintained by Corma · Public Github repo available here
+          You want to contribute? Public Github repo available here
           <Github className="h-3.5 w-3.5" />
         </a>
 
