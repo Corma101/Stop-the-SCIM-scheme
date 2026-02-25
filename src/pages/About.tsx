@@ -45,12 +45,12 @@ const About = () => {
           <p className="text-secondary-foreground">
             When an employee joins, their access should appear instantly. When they leave, it should disappear just as fast.
           </p>
-          <p>That is not convenience. That is control.</p>
-          <p className="text-secondary-foreground">SCIM (System for Cross-domain Identity Management) is the standard for automated provisioning and deprovisioning. SCIM exists so companies can manage identity at scale without spreadsheets, tickets, and human delay. It closes gaps. It reduces risk. It protects customers.
+          <p className="text-secondary-foreground">That is not convenience. That is control.</p>
+          <p className="text-secondary-foreground">SCIM (System for cross-system identity management) is the standard for automated provisioning and deprovisioning. It exists so companies can manage identity at scale without spreadsheets, tickets, and human delay. It closes gaps. It reduces risk. It protects customers. The SCIM system has long been ago been established as an industry standard and can be found in the large majority of tools.
             <a href="https://www.corma.io/blog/understanding-scim-and-saml-in-under-5-minutes" target="_blank" rel="noopener noreferrer" className="underline text-foreground hover:text-primary transition-colors">SCIM</a> — the standard for automated provisioning and deprovisioning — exists so companies can manage identity at scale without spreadsheets, tickets, and human delay. It closes gaps. It reduces risk. It protects customers.
           </p>
-          <p>And yet, many vendors lock lifecycle automation behind enterprise paywalls.</p>
-          <p>
+          <p className="text-secondary-foreground">And yet, many vendors lock lifecycle automation behind enterprise paywalls.</p>
+          <p className="text-secondary-foreground">
             They charge more to remove access. They upsell security as a feature. They monetize what should be baseline hygiene.
           </p>
           <p className="text-foreground font-semibold">We call that the SCIM Scheme.</p>
