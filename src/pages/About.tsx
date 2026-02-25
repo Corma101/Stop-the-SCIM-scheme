@@ -24,7 +24,7 @@ const About = () => {
           The SCIM Scheme Manifesto
         </h1>
 
-        <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed font-mono italic">Security is not a p tier.
+        <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed font-mono italic">Security is not a premium feature.
 
         </p>
 
@@ -42,11 +42,11 @@ const About = () => {
       {/* Manifesto intro */}
       <section className="mx-auto max-w-3xl px-6 py-16">
         <div className="space-y-4 text-muted-foreground font-mono text-sm leading-relaxed">
-          <p>
+          <p className="text-secondary-foreground">
             When an employee joins, their access should appear instantly. When they leave, it should disappear just as fast.
           </p>
           <p>That is not convenience. That is control.</p>
-          <p>
+          <p className="text-secondary-foreground">SCIM (System for Cross-domain Identity Management) is the standard for automated provisioning and deprovisioning. SCIM exists so companies can manage identity at scale without spreadsheets, tickets, and human delay. It closes gaps. It reduces risk. It protects customers.
             <a href="https://www.corma.io/blog/understanding-scim-and-saml-in-under-5-minutes" target="_blank" rel="noopener noreferrer" className="underline text-foreground hover:text-primary transition-colors">SCIM</a> — the standard for automated provisioning and deprovisioning — exists so companies can manage identity at scale without spreadsheets, tickets, and human delay. It closes gaps. It reduces risk. It protects customers.
           </p>
           <p>And yet, many vendors lock lifecycle automation behind enterprise paywalls.</p>
