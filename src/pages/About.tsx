@@ -45,9 +45,9 @@ const About = () => {
             When an employee joins, their access should appear instantly. When they leave, it should disappear just as
             fast.
           </p>
-          <p className="text-secondary-foreground">That is not convenience. That is control
+          <p className="text-secondary-foreground">SCIM is the standard for automated provisioning and deprovisioning. IT exists so companies can manage identity at scale without spreadsheets, tickets, and human delay. It closes gaps. It reduces risk. It protects customers. The SCIM system has long been ago been established as an industry standard and can be found in the large majority of tools.
 
-SCIM is the standard for automated provisioning and deprovisioning. IT exists so companies can manage identity at scale without spreadsheets, tickets, and human delay. It closes gaps. It reduces risk. It protects customers. The SCIM system has long been ago been established as an industry standard and can be found in the large majority of tools.
+
 
           </p>
           
