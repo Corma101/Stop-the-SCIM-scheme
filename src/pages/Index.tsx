@@ -16,14 +16,14 @@ const Index = () => {
           href="https://github.com/Corma101/Stop-the-SCIM-scheme"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 rounded-full border bg-card px-4 py-1.5 text-xs font-medium uppercase tracking-widest text-muted-foreground font-mono shadow-sm transition-colors hover:bg-accent hover:text-foreground"
-        >
-          You want to contribute? Public Github repo available here
+          className="inline-flex items-center gap-2 rounded-full border bg-card px-4 py-1.5 text-xs font-medium uppercase tracking-widest text-muted-foreground font-mono shadow-sm transition-colors hover:bg-accent hover:text-foreground">YOU DISCOVERED THE LATEST SCIM PAYWALL? · PUBLIC GITHUB REPO AVAILABLE HERE
+
+
           <Github className="h-3.5 w-3.5" />
         </a>
 
-        <h1 className="mx-auto mt-6 max-w-3xl text-4xl font-medium leading-tight font-sans md:text-5xl">
-          Your exhaustive guide to SCIM support and tax prices across 1000+ apps
+        <h1 className="mx-auto mt-6 max-w-3xl text-4xl font-medium leading-tight font-sans md:text-5xl">Your guide to discover SCIM fees across 1000+ apps
+
         </h1>
 
         <p className="mx-auto mt-4 max-w-2xl text-base text-muted-foreground leading-relaxed font-mono">
@@ -60,15 +60,15 @@ const Index = () => {
             href="https://github.com/Corma101/Stop-the-SCIM-scheme"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-foreground transition-colors"
-          >
+            className="hover:text-foreground transition-colors">
+
             GitHub
           </a>
         </div>
         <p>© 2026 Corma. SCIM Directory — Helping IT teams navigate provisioning complexity.</p>
       </footer>
-    </div>
-  );
+    </div>);
+
 };
 
 export default Index;
