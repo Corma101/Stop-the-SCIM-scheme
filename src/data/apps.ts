@@ -75,16 +75,46 @@ export const getScimStatusColor = (status: ScimStatus): string => {
   }
 };
 
-export const stats = {
-  totalApps: 1053,
-  noScimPercent: "57%",
-  scimTaxPercent: "41%",
-  avgScimTax: "245%",
-};
+/** Stats derived from the current apps list (no longer hardcoded). */
+export const stats = (() => {
+  const total = apps.length;
+  const noScim = apps.filter((a) => a.scimStatus === "no-scim").length;
+  const scimTax = apps.filter((a) => a.scimStatus === "scim-tax").length;
+  const percentValues = apps
+    .filter((a) => a.scimStatus === "scim-tax" && a.percentIncrease)
+    .map((a) => {
+      const s = (a.percentIncrease || "").replace(/%/g, "").trim();
+      const num = Number.parseFloat(s.split("-")[0].split("–")[0]);
+      return Number.isFinite(num) ? num : null;
+    })
+    .filter((n): n is number => n !== null);
+  const avgScimTax =
+    percentValues.length > 0
+      ? Math.round(percentValues.reduce((s, n) => s + n, 0) / percentValues.length) + "%"
+      : "—";
+  return {
+    totalApps: total,
+    noScimPercent: total ? Math.round((noScim / total) * 100) + "%" : "0%",
+    scimTaxPercent: total ? Math.round((scimTax / total) * 100) + "%" : "0%",
+    avgScimTax,
+  };
+})();
 
-export const categories = [
-  { title: "Apps without SCIM", description: "Do not support automated provisioning", count: 411, icon: "zap-off" as const },
-  { title: "The SCIM Tax", description: "SCIM gated behind expensive enterprise upgrades", count: 294, icon: "lock" as const },
-  { title: "State of automation 2026", description: "98% of apps still require manual provisioning", count: 721, icon: "file-text" as const },
-  { title: "Most expensive to manage", description: "Top 10 apps with the highest manual admin cost", count: 10, icon: "trending-up" as const },
-];
+/** Category cards with counts derived from the current apps list. */
+export const categories = (() => {
+  const noScimCount = apps.filter((a) => a.scimStatus === "no-scim").length;
+  const scimTaxCount = apps.filter((a) => a.scimStatus === "scim-tax").length;
+  const total = apps.length;
+  const manualPercent = total ? Math.round(((noScimCount + scimTaxCount) / total) * 100) : 0;
+  const byCost = [...apps].sort((a, b) => {
+    const num = (s: string) => Number(s?.replace(/[^0-9]/g, "") || 0);
+    return num(b.manualCost) - num(a.manualCost);
+  });
+  const top10 = byCost.slice(0, 10).length;
+  return [
+    { title: "Apps without SCIM", description: "Do not support automated provisioning", count: noScimCount, icon: "zap-off" as const },
+    { title: "The SCIM Tax", description: "SCIM gated behind expensive enterprise upgrades", count: scimTaxCount, icon: "lock" as const },
+    { title: "State of automation 2026", description: `${manualPercent}% of apps still require manual provisioning`, count: noScimCount + scimTaxCount, icon: "file-text" as const },
+    { title: "Most expensive to manage", description: "Top 10 apps with the highest manual admin cost", count: top10, icon: "trending-up" as const },
+  ];
+})();

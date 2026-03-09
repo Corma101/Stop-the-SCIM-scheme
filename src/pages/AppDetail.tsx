@@ -69,14 +69,14 @@ const AppDetail = () => {
             <div className="mt-4 flex items-center gap-3 flex-wrap">
               <h1 className="text-3xl font-medium font-sans md:text-4xl">{app.name} SCIM guide</h1>
               <span className={`rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-wide ${getScimStatusColor(app.scimStatus)}`}>
-                {app.scimStatus === "no-scim" ? "No SCIM" : "Native SCIM"}
+                {getScimStatusLabel(app.scimStatus)}
               </span>
             </div>
             <p className="mt-2 text-muted-foreground">How to automate {app.name} user provisioning, and what it actually costs</p>
-            {app.scimTier !== "N/A" && app.scimTier !== "All Editions" && (
+            {app.scimTier !== "N/A" && app.scimTier !== "All Editions" && app.scimTier !== "All" && (
               <div className="mt-3 inline-flex items-center gap-2 rounded-lg border px-3 py-1.5 text-xs text-muted-foreground">
                 <Lock className="h-3.5 w-3.5" />
-                Native SCIM requires <strong className="text-foreground">{app.scimTier}</strong> plan
+                {app.scimStatus === "scim-tax" ? "SCIM requires" : "Available on"} <strong className="text-foreground">{app.scimTier}</strong> plan
               </div>
             )}
           </div>

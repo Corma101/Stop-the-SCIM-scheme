@@ -22,11 +22,9 @@ const AppCard = ({ app }: { app: AppData }) => {
 
       <div className="mt-4 flex items-center gap-4 text-xs">
         <div>
-          <span className="text-muted-foreground">
-            {app.scimStatus === "no-scim" ? "Provisioning" : "SCIM Status"}
-          </span>
+          <span className="text-muted-foreground">SCIM Status</span>
           <span className="ml-1 font-medium">
-            {app.scimStatus === "no-scim" ? "Not Supported" : "Included"}
+            {getScimStatusLabel(app.scimStatus)}
           </span>
         </div>
         <div>
