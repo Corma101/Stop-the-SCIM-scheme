@@ -4,6 +4,7 @@ import { Github } from "lucide-react";
 import SearchBar from "@/components/SearchBar";
 import StatsRow from "@/components/StatsRow";
 import AppGrid from "@/components/AppGrid";
+import { apps } from "@/data/apps";
 
 const Index = () => {
   const [activeFilter, setActiveFilter] = useState("all");
@@ -22,8 +23,8 @@ const Index = () => {
           <Github className="h-3.5 w-3.5" />
         </a>
 
-        <h1 className="mx-auto mt-6 max-w-3xl text-4xl font-medium leading-tight font-sans md:text-5xl">Your guide to discover SCIM fees across 1000+ apps
-
+        <h1 className="mx-auto mt-6 max-w-3xl text-4xl font-medium leading-tight font-sans md:text-5xl">
+          Your guide to discover SCIM fees across {apps.length}+ apps
         </h1>
 
         <p className="mx-auto mt-4 max-w-2xl text-base text-muted-foreground leading-relaxed font-mono">
