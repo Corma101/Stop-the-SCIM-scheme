@@ -4,19 +4,10 @@ Thanks for helping keep the app directory accurate. The list is **public and com
 
 ## How to add or edit an app
 
-App data lives in **`src/data/apps.json`**. It’s a single JSON array of app objects.
-
-### Option 1: Edit on GitHub (easiest)
-
-1. Open **[src/data/apps.json](src/data/apps.json)** in this repo.
-2. Click the **pencil icon** (Edit this file).
-3. Add a new app object to the array, or edit an existing one. Keep the same structure as other entries (see **Data format** below).
-4. Click **Commit changes** and open a **Pull request**.
-
-### Option 2: Edit locally
+App data lives in **`src/data/apps.json`**. It’s a single JSON array of app objects. The file is large, so use a local editor rather than GitHub’s web editor.
 
 1. Fork and clone the repo.
-2. Edit `src/data/apps.json` (add or change an app).
+2. Edit `src/data/apps.json` (add or change an app). Keep the same structure as other entries (see **Data format** below).
 3. Commit and open a Pull request.
 
 No build or sync step is required. After your PR is merged, the site updates on the next deploy.

@@ -1,73 +1,53 @@
-# Welcome to your Lovable project
+# Stop the SCIM Scheme
 
-## Project info
+**Security is not a premium feature.**
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+[SCIM](https://scim.cloud) (System for Cross-domain Identity Management) is the standard for automated user provisioning and deprovisioning. When someone joins, their access should appear instantly. When they leave, it should disappear just as fast. That’s baseline identity hygiene — not an upsell.
 
-## How can I edit this code?
+Yet many vendors lock SCIM behind their most expensive “Enterprise” tiers, often doubling or tripling the cost just to get lifecycle automation. They charge more to remove access. They monetize what should be included by default.
 
-There are several ways of editing your application.
+**We call that the SCIM Scheme.**
 
-**Use Lovable**
+This project is a **community-driven directory** that documents which apps support SCIM, which ones hide it behind a paywall (“SCIM tax”), and which don’t support it at all — so IT teams and buyers can see who actually values security and who treats it as a premium add-on.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+**→ Find the app: [scim-scheme.org](https://scim-scheme.org/)**
 
-Changes made via Lovable will be committed automatically to this repo.
+---
 
-**Use your preferred IDE**
+## What’s in the directory
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- **Has SCIM** — Automated provisioning/deprovisioning available without an enterprise upsell  
+- **SCIM Tax** — SCIM gated behind higher-tier or enterprise plans  
+- **No SCIM** — No automated provisioning; manual account management only  
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+For each app we track SCIM status, pricing tiers, manual cost of *not* automating, IdP support, and practical recommendations. The goal is transparency: stop the scheme by naming it.
 
-Follow these steps:
+---
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## Contribute
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+The list is **public and community-maintained**. Anyone can add or correct apps.
 
-# Step 3: Install the necessary dependencies.
+- **Live app:** [scim-scheme.org](https://scim-scheme.org/)  
+- **Repo:** [github.com/Corma101/Stop-the-SCIM-scheme](https://github.com/Corma101/Stop-the-SCIM-scheme)  
+- **How to contribute:** See [CONTRIBUTING.md](./CONTRIBUTING.md) — app data lives in `src/data/apps.json`; edit and open a PR.  
+- **Found a new SCIM paywall?** Open an issue or PR and we’ll add it.
+
+---
+
+## Run locally
+
+```bash
+git clone https://github.com/Corma101/Stop-the-SCIM-scheme.git
+cd Stop-the-SCIM-scheme
 npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Requires Node.js and npm. The app is a React + Vite + TypeScript frontend; app data is loaded from `src/data/apps.json`.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+---
 
-**Use GitHub Codespaces**
+## Tech
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Vite, React, TypeScript, Tailwind CSS, shadcn/ui. No backend; the directory is static data plus a searchable, filterable UI.
