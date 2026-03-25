@@ -2,6 +2,8 @@ import appsData from "./apps.json";
 
 export type ScimStatus = "has-scim" | "scim-tax" | "no-scim";
 
+export { resolveScimPricingDisplay, findPlanMatchingScimTier } from "@/lib/scimPricing";
+
 export type IdpSupport = {
   name: string;
   sso: boolean;

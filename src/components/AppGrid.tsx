@@ -1,11 +1,26 @@
 import { useState, useMemo, useEffect } from "react";
-import { apps, ScimStatus, getScimStatusLabel, getScimStatusColor } from "@/data/apps";
+import { apps, getScimStatusLabel, getScimStatusColor, resolveScimPricingDisplay, type ScimStatus } from "@/data/apps";
+import { formatDirectoryPercentIncrease } from "@/lib/scimPricing";
 import AppCard from "./AppCard";
 import { SlidersHorizontal, ArrowUpDown, LayoutGrid, List, ExternalLink } from "lucide-react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 interface AppGridProps {
   externalFilter?: string;
+}
+
+/** List SCIM tax vendors first, then has-scim, then no-scim. */
+function scimStatusSortRank(status: ScimStatus): number {
+  switch (status) {
+    case "scim-tax":
+      return 0;
+    case "has-scim":
+      return 1;
+    case "no-scim":
+      return 2;
+    default:
+      return 3;
+  }
 }
 
 const AppGrid = ({ externalFilter }: AppGridProps) => {
@@ -27,11 +42,13 @@ const AppGrid = ({ externalFilter }: AppGridProps) => {
     if (statusFilter !== "all") {
       result = result.filter((a) => a.scimStatus === statusFilter);
     }
-    if (sortBy === "az") {
-      result.sort((a, b) => a.name.localeCompare(b.name));
-    } else if (sortBy === "za") {
-      result.sort((a, b) => b.name.localeCompare(a.name));
-    }
+    result.sort((a, b) => {
+      const ra = scimStatusSortRank(a.scimStatus);
+      const rb = scimStatusSortRank(b.scimStatus);
+      if (ra !== rb) return ra - rb;
+      const byName = a.name.localeCompare(b.name);
+      return sortBy === "za" ? -byName : byName;
+    });
     return result;
   }, [statusFilter, sortBy, searchQuery]);
 
@@ -58,8 +75,8 @@ const AppGrid = ({ externalFilter }: AppGridProps) => {
             onChange={(e) => setSortBy(e.target.value)}
             className="appearance-none rounded-lg border bg-card px-4 py-2 pr-8 text-sm outline-none focus:ring-1 focus:ring-ring"
           >
-            <option value="az">A-Z</option>
-            <option value="za">Z-A</option>
+            <option value="az">SCIM tax first · A–Z</option>
+            <option value="za">SCIM tax first · Z–A</option>
           </select>
           <ArrowUpDown className="pointer-events-none absolute right-2.5 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-muted-foreground" />
         </div>
@@ -107,7 +124,8 @@ const AppGrid = ({ externalFilter }: AppGridProps) => {
             <tbody>
               {filtered.map((app, i) => {
                 const basePlan = app.pricing.plans[0];
-                const scimPlan = app.pricing.plans.find((p) => p.scim);
+                const scimPricing = resolveScimPricingDisplay(app);
+                const pctLabel = formatDirectoryPercentIncrease(app);
                 return (
                   <tr key={app.slug} className={`${i % 2 === 0 ? "bg-card" : "bg-muted/30"} transition-colors hover:bg-accent/50 cursor-pointer`} onClick={() => navigate(`/scim/${app.slug}`)}>
                     <td className="px-4 py-3">
@@ -120,8 +138,8 @@ const AppGrid = ({ externalFilter }: AppGridProps) => {
                       </span>
                     </td>
                     <td className="px-4 py-3 text-muted-foreground">{basePlan?.price ?? "—"}</td>
-                    <td className="px-4 py-3 text-muted-foreground">{scimPlan?.price ?? "N/A"}</td>
-                    <td className="px-4 py-3 font-medium text-primary">{app.percentIncrease ?? "—"}</td>
+                    <td className="px-4 py-3 text-muted-foreground">{scimPricing}</td>
+                    <td className="px-4 py-3 font-medium text-primary">{pctLabel}</td>
                     <td className="px-4 py-3 text-muted-foreground text-xs">{app.lastUpdated ?? "Jan 2026"}</td>
                     <td className="px-4 py-3">
                       {app.quickFacts?.docsUrl && (

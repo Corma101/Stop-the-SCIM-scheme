@@ -2166,7 +2166,8 @@
         "recommendation": "Manual provisioning may work: but watch for access sprawl"
       }
     ],
-    "bottomLine": ""
+    "bottomLine": "",
+    "percentIncrease": "125%"
   },
   {
     "slug": "airwallex",
@@ -2581,7 +2582,8 @@
         "recommendation": "Use Corma: no SSO prerequisite required"
       }
     ],
-    "bottomLine": ""
+    "bottomLine": "",
+    "percentIncrease": "200%"
   },
   {
     "slug": "amazinghiring",
@@ -3347,7 +3349,8 @@
         "recommendation": "Manual may work: but watch for data access risks when reps leave"
       }
     ],
-    "bottomLine": ""
+    "bottomLine": "",
+    "percentIncrease": "143%"
   },
   {
     "slug": "appcues",
@@ -3969,7 +3972,8 @@
         "recommendation": "Manual may work: but watch for security gaps as you scale"
       }
     ],
-    "bottomLine": ""
+    "bottomLine": "",
+    "percentIncrease": "218%"
   },
   {
     "slug": "ashby",
@@ -5478,7 +5482,8 @@
         "recommendation": "Use Corma: simpler than contacting Atlassian support"
       }
     ],
-    "bottomLine": ""
+    "bottomLine": "",
+    "percentIncrease": "250%"
   },
   {
     "slug": "autodesk",
@@ -10379,7 +10384,8 @@
         "recommendation": "Manual may suffice: but watch for onboarding delays and offboarding gaps"
       }
     ],
-    "bottomLine": ""
+    "bottomLine": "",
+    "percentIncrease": "101%"
   },
   {
     "slug": "calendly",
@@ -11967,7 +11973,8 @@
         "recommendation": "Manual provisioning may work: but monitor security gaps"
       }
     ],
-    "bottomLine": ""
+    "bottomLine": "",
+    "percentIncrease": "140%"
   },
   {
     "slug": "checkmarx",
@@ -12916,7 +12923,8 @@
         "recommendation": "Manual may work: but monitor for policy assignment gaps"
       }
     ],
-    "bottomLine": ""
+    "bottomLine": "",
+    "percentIncrease": "103%"
   },
   {
     "slug": "clari",
@@ -13649,7 +13657,8 @@
         "recommendation": "Manual may work: but watch for security gaps as you grow"
       }
     ],
-    "bottomLine": ""
+    "bottomLine": "",
+    "percentIncrease": "192%"
   },
   {
     "slug": "clockify",
@@ -15984,7 +15993,8 @@
         "recommendation": "Use Corma: broader IdP compatibility"
       }
     ],
-    "bottomLine": ""
+    "bottomLine": "",
+    "percentIncrease": "1010%"
   },
   {
     "slug": "coralogix",
@@ -18746,7 +18756,8 @@
         "recommendation": "Use Corma: dbt only supports Okta and Entra natively"
       }
     ],
-    "bottomLine": ""
+    "bottomLine": "",
+    "percentIncrease": "154%"
   },
   {
     "slug": "deel",
@@ -19509,7 +19520,8 @@
         "recommendation": "Manual may work: but phone number assignment is manual"
       }
     ],
-    "bottomLine": ""
+    "bottomLine": "",
+    "percentIncrease": "67%"
   },
   {
     "slug": "disco",
@@ -20044,7 +20056,8 @@
         "recommendation": "Manual may work: but container registry security risks grow with scale"
       }
     ],
-    "bottomLine": ""
+    "bottomLine": "",
+    "percentIncrease": "167%"
   },
   {
     "slug": "document360",
@@ -21256,7 +21269,8 @@
         "recommendation": "Manual may work: but watch for security gaps"
       }
     ],
-    "bottomLine": ""
+    "bottomLine": "",
+    "percentIncrease": "25%"
   },
   {
     "slug": "dynatrace",
@@ -21597,7 +21611,8 @@
         "recommendation": "Manual provisioning may work: but track file access gaps"
       }
     ],
-    "bottomLine": ""
+    "bottomLine": "",
+    "percentIncrease": "265%"
   },
   {
     "slug": "elastic-path",
@@ -22651,7 +22666,8 @@
         "recommendation": "Manual may work: but monitor for security gaps in board permissions"
       }
     ],
-    "bottomLine": ""
+    "bottomLine": "",
+    "percentIncrease": "113%"
   },
   {
     "slug": "fibery",
@@ -22769,7 +22785,8 @@
         "recommendation": "Manual may work: but monitor for access creep"
       }
     ],
-    "bottomLine": ""
+    "bottomLine": "",
+    "percentIncrease": "100%"
   },
   {
     "slug": "figma",
@@ -22887,7 +22904,8 @@
         "recommendation": "Manual may work: but watch for access sprawl as design teams grow"
       }
     ],
-    "bottomLine": ""
+    "bottomLine": "",
+    "percentIncrease": "244%"
   },
   {
     "slug": "filevine",
@@ -25787,7 +25805,8 @@
         "recommendation": "Manual may work: but code security risks are high"
       }
     ],
-    "bottomLine": ""
+    "bottomLine": "",
+    "percentIncrease": "425%"
   },
   {
     "slug": "github-copilot",
@@ -25905,7 +25924,8 @@
         "recommendation": "Manual may work: but monitor for AI coding access gaps"
       }
     ],
-    "bottomLine": ""
+    "bottomLine": "",
+    "percentIncrease": "105%"
   },
   {
     "slug": "gitlab",
@@ -26027,7 +26047,8 @@
         "recommendation": "Manual may work: but source code access requires tight controls"
       }
     ],
-    "bottomLine": ""
+    "bottomLine": "",
+    "percentIncrease": "241%"
   },
   {
     "slug": "gladly",
@@ -30838,7 +30859,8 @@
         "recommendation": "Manual may work: but monitor for compliance gaps as you grow"
       }
     ],
-    "bottomLine": ""
+    "bottomLine": "",
+    "percentIncrease": "900%"
   },
   {
     "slug": "hugging-face",
@@ -32316,7 +32338,8 @@
         "recommendation": "Manual may suffice: but watch for onboarding delays hurting quota attainment"
       }
     ],
-    "bottomLine": ""
+    "bottomLine": "",
+    "percentIncrease": "241%"
   },
   {
     "slug": "instapage",
@@ -32628,7 +32651,8 @@
         "recommendation": "Manual may suffice: but watch for access creep"
       }
     ],
-    "bottomLine": ""
+    "bottomLine": "",
+    "percentIncrease": "355%"
   },
   {
     "slug": "invision",
@@ -35082,7 +35106,8 @@
         "recommendation": "Stay on Enterprise: but monitor for security gaps"
       }
     ],
-    "bottomLine": ""
+    "bottomLine": "",
+    "percentIncrease": "56%"
   },
   {
     "slug": "kyriba",
@@ -35609,7 +35634,8 @@
         "recommendation": "Manual may work: but password vaults make offboarding errors costly"
       }
     ],
-    "bottomLine": ""
+    "bottomLine": "",
+    "percentIncrease": "75%"
   },
   {
     "slug": "later",
@@ -38264,7 +38290,8 @@
         "recommendation": "Manual may work: but watch for security gaps"
       }
     ],
-    "bottomLine": ""
+    "bottomLine": "",
+    "percentIncrease": "84%"
   },
   {
     "slug": "lusha",
@@ -40948,7 +40975,8 @@
         "recommendation": "Manual may work: but watch for security gaps"
       }
     ],
-    "bottomLine": ""
+    "bottomLine": "",
+    "percentIncrease": "100%"
   },
   {
     "slug": "metaplane",
@@ -42586,7 +42614,8 @@
         "recommendation": "Manual provisioning may work: but JIT can create security gaps"
       }
     ],
-    "bottomLine": ""
+    "bottomLine": "",
+    "percentIncrease": "344%"
   },
   {
     "slug": "mongodb",
@@ -43224,7 +43253,8 @@
         "recommendation": "Manual may work: but watch for collaboration access gaps"
       }
     ],
-    "bottomLine": ""
+    "bottomLine": "",
+    "percentIncrease": "80%"
   },
   {
     "slug": "murex",
@@ -44332,7 +44362,8 @@
         "recommendation": "Manual may work: but monitor for security gaps during agent ramp-ups"
       }
     ],
-    "bottomLine": ""
+    "bottomLine": "",
+    "percentIncrease": "170%"
   },
   {
     "slug": "nifty",
@@ -45169,7 +45200,8 @@
         "recommendation": "Manual provisioning may suffice: but watch for security gaps as you grow"
       }
     ],
-    "bottomLine": ""
+    "bottomLine": "",
+    "percentIncrease": "115%"
   },
   {
     "slug": "nuclino",
@@ -46484,7 +46516,8 @@
         "recommendation": "Manual provisioning may work: but watch for Oracle integration gaps"
       }
     ],
-    "bottomLine": ""
+    "bottomLine": "",
+    "percentIncrease": "362%"
   },
   {
     "slug": "oracle-hcm",
@@ -47356,7 +47389,8 @@
         "recommendation": "Use Corma: eliminate provisioning gaps that could impact on-call coverage"
       }
     ],
-    "bottomLine": ""
+    "bottomLine": "",
+    "percentIncrease": "95%"
   },
   {
     "slug": "palo-alto-networks",
@@ -50798,7 +50832,8 @@
         "recommendation": "Manual may be acceptable: but watch for API credential sprawl"
       }
     ],
-    "bottomLine": ""
+    "bottomLine": "",
+    "percentIncrease": "158%"
   },
   {
     "slug": "postmark",
@@ -53368,7 +53403,8 @@
         "recommendation": "Use Corma: managed automation at flat pricing"
       }
     ],
-    "bottomLine": ""
+    "bottomLine": "",
+    "percentIncrease": "150%"
   },
   {
     "slug": "qwilr",
@@ -56556,7 +56592,8 @@
         "recommendation": "Manual may work: but watch for permission complexity"
       }
     ],
-    "bottomLine": ""
+    "bottomLine": "",
+    "percentIncrease": "600%"
   },
   {
     "slug": "salesloft",
@@ -60843,7 +60880,8 @@
         "recommendation": "Use Corma: no irreversible tier upgrades required"
       }
     ],
-    "bottomLine": ""
+    "bottomLine": "",
+    "percentIncrease": "176%"
   },
   {
     "slug": "slite",
@@ -73092,7 +73130,8 @@
         "recommendation": "Manual may work: but monitor for access drift"
       }
     ],
-    "bottomLine": ""
+    "bottomLine": "",
+    "percentIncrease": "258%"
   },
   {
     "slug": "whatfix",
@@ -73623,7 +73662,8 @@
         "recommendation": "Manual may work: but consider security implications for code access"
       }
     ],
-    "bottomLine": ""
+    "bottomLine": "",
+    "percentIncrease": "100%"
   },
   {
     "slug": "wistia",
@@ -76307,7 +76347,8 @@
         "recommendation": "Manual may work: but monitor for SSO/provisioning gaps"
       }
     ],
-    "bottomLine": ""
+    "bottomLine": "",
+    "percentIncrease": "22%"
   },
   {
     "slug": "zoominfo",
