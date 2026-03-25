@@ -2,6 +2,8 @@
 
 Community directory of SaaS apps: SCIM support, pricing tiers, and related context—so teams can see which vendors treat automated provisioning as a baseline feature versus a paid add-on.
 
+**Live site:** [scim-scheme.org](https://scim-scheme.org/)
+
 ## Run locally
 
 Requires [Node.js](https://nodejs.org/) and npm.
